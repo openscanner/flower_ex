@@ -3,6 +3,7 @@
 
 from flower.urls import handlers
 from flower_ex.tasks import ListRegisteredTasks
+from flower_ex.broker import BrokerInfo
 
 
 _EXTENDED = False
@@ -14,6 +15,7 @@ def extend_handles():
         _EXTENDED = True
         ex_handles = [
             (r"/api/task/registered", ListRegisteredTasks),
+            (r"/api/broker", BrokerInfo)
         ]
 
         # The last item in Flower URL's handles is ".*", so extended url should add to first
