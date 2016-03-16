@@ -50,7 +50,7 @@ with open(os.path.join(here, 'flower_ex/__init__.py')) as meta_fh:
 
 
 def get_requirements():
-    return open('requirements.txt').read().splitlines()
+    return open(os.path.join(os.getcwd(), 'requirements.txt')).read().splitlines()
 
 
 install_requires = get_requirements()
@@ -64,7 +64,7 @@ setup(
     url=meta['homepage'],
     platforms=['any'],
     license='BSD',
-    packages=find_packages(exclude=['tests', 'tests.*', ], include=['flower_ex', 'flower_ex.*']),
+    packages=find_packages(exclude=['tests', 'tests.*', ]),
     install_requires=install_requires,
 
     entry_points={
