@@ -18,6 +18,6 @@ __author__ = 'Wu Yadong'
 __contact__ = 'wuyd@openscanner.cn'
 __homepage__ = 'https://github.com/openscanner/flower_ex'
 __all__ = [
-    'version', '__version__',
+    'VERSION', '__version__',
 ]
 VERSION_BANNER = '{0} ({1})'.format(__version__, SERIES)
